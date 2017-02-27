@@ -1,0 +1,9 @@
+
+<template ngFor let-list [ngForOf]="moveService.lists" let-i="index">
+    <div [ngClass] = "{'selected': paletteService.selectMove === i}"
+         class="move"
+         (click)="onSelectMove(i)"
+         [ngStyle]="{'background-color' : '#'+list.backColor}"
+         title = {{list.title}}>
+    </div>
+</template>

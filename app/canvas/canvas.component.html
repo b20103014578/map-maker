@@ -1,0 +1,7 @@
+<canvas #canvas 
+    [width]="canvasService.clientWidth" [height]="canvasService.clientHeight" 
+    (mousewheel)="onMouseEvent($event)"
+    (mousedown)="onMouseEvent($event)"
+    (mouseup)="onMouseEvent($event)"
+    (mousemove)="onMouseEvent($event)"> 
+</canvas>

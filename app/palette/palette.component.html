@@ -1,0 +1,19 @@
+
+<div id="palette-category" class="flex-row">
+    <li *ngFor = "let list of categoryList; let i = index"
+        [ngClass] = "{'selected': paletteService.selectCategory === list}"
+        class = 'font-category category'
+        (click) = "onSelectCategory(i)">
+        {{list}}
+    </li>
+</div>
+
+<div id="palette-title">
+    <h3 class="font-title">{{title}}</h3>
+</div>
+
+<div id="palette-content">
+    <my-tile [hidden]="!(paletteService.selectCategory === 'Tile')"> </my-tile>
+    <my-move [hidden]="!(paletteService.selectCategory === 'Move')"> </my-move>
+    <my-object [hidden]="!(paletteService.selectCategory === 'Object')"> </my-object>
+</div>

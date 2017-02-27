@@ -1,0 +1,22 @@
+
+<div *ngFor="let list of setList"
+    class="font-content content"
+    [ngSwitch]="list.mode"
+    (click)="onSelect(list)">
+    {{list.title}}
+
+    <li *ngSwitchCase="'select'" class="option">
+        <a *ngIf="list.type == 'nonValue'">
+            »
+        </a>
+        <a *ngIf="list.type != 'nonValue'">
+            {{list.option[list.value]}} »
+        </a>
+    </li>
+
+    <ng-switch *ngSwitchCase="'switch'" [(ngModel)]="list.value" class="option"> </ng-switch>
+    
+    <li *ngSwitchCase="'list'" class="option">
+        »
+    </li>
+</div>

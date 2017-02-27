@@ -1,0 +1,12 @@
+
+.move{
+    float: left;
+    margin: 0px 1px 1px 0px;
+    width: 40px;
+    height: 40px;
+    border-style: solid;
+}
+
+.move.selected{
+    border-color: #F00;
+}

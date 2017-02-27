@@ -1,0 +1,16 @@
+
+<template ngFor let-list [ngForOf]="objectService.paths" let-i="index">
+    <div [ngClass] = "{'selected': paletteService.selectObjectCategory === i}"
+         class="font-content content"
+         (click)="onSelectObjectCategory(i)">
+        {{list.floder}}
+    </div>
+    
+    <template ngFor let-file [ngForOf]="list.files" let-j="index">
+        <img [hidden]="!(paletteService.selectObjectCategory === i)" 
+             [src]="'/app/images/object/'+list.floder+'/'+file"
+             [ngClass] = "{'selected': paletteService.selectObject === j}"
+             class="object"
+             (click)="onSelectObject(j)">
+    </template>
+</template>

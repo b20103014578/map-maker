@@ -1,0 +1,9 @@
+
+<div class="flex-row" style="height: 100%" oncontextmenu="window.event.returnValue=false">
+    <my-palette class="flex-column"> </my-palette>
+    <my-canvas onmousewheel="return false;"> </my-canvas>
+</div>
+
+<my-slider [style.right]="this.sliderService.right+'px'" class="flex-row"> </my-slider>
+
+<my-keyboard></my-keyboard>

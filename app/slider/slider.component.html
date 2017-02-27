@@ -1,0 +1,18 @@
+
+<div id="slider-tab">
+    <div *ngFor="let list of categoryList; let i = index"
+        [ngClass]="{'selected': category === list}"
+        class="font-category category"
+        (click)="onSelect(i)">
+        <span>{{list}}</span>
+    </div>
+</div>
+
+<div id="slider" class="flex-column">
+    <div class="title">
+        <my-close (click)="onClose()"> </my-close>
+        <h3 class="font-title">{{title}}</h3>
+    </div>
+
+    <my-set *ngIf="this.sliderService.selectCategory === 0" class="flex-1"></my-set>
+</div>
